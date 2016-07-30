@@ -20,6 +20,6 @@ b1=unique(b)
 bb=B1[,2]
 bb2=which(bb=='00:00:00')
 plot(as.numeric(B[,1]),ylab='Global Active Power (kilowatts)',xlab='',main='',type='l',xaxt='n')
-axis(1,c(bb2,length(bb)+1),c(b1,'Sat'))
-dev.copy(png,file='plot2.png')
+axis(1,c(bb2,length(bb)+1),c('Thu','Fri','Sat'))
+dev.copy(png,file='plot2.png',width=480,height=480)
 dev.off()

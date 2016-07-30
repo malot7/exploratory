@@ -18,5 +18,5 @@ w=which(B[,3]=='?')
 #to create the plot1
 hist(as.numeric(B[,1]),col='red',main='Global Active Power', xlab='Global Active Power (kilowatts)')
 
-dev.copy(png,file='plot1.png')
+dev.copy(png,file='plot1.png',width=480,height=480)
 dev.off()

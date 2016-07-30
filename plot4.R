@@ -23,7 +23,7 @@ bb2=which(bb=='00:00:00')
 
 par(mfcol=c(2,2))
 plot(as.numeric(B[,1]),ylab='Global Active Power',xlab='',main='',type='l',xaxt='n')
-axis(1,c(bb2,length(bb)+1),c(b1,'Sat'))
+axis(1,c(bb2,length(bb)+1),c('Thu','Fri','Sat'))
 
 y=c(as.numeric(B[,5]),as.numeric(B[,6]),as.numeric(B[,7]))
 plot(as.numeric(B[,5]),ylim=c(min(0,y),max(y)),ylab='Energy sub metering',xlab='',main='',type='n',xaxt='n')
@@ -31,13 +31,13 @@ points(as.numeric(B[,5]),type='l')
 points(as.numeric(B[,6]),type='l',col='red')
 points(as.numeric(B[,7]),type='l',col='blue')
 legend('topright',name[5:7],col=c('black','red','blue'),lty=c(1,1,1),bty='n',cex=0.8)
-axis(1,c(bb2,length(bb)+1),c(b1,'Sat'))
+axis(1,c(bb2,length(bb)+1),c('Thu','Fri','Sat'))
 
 plot(as.numeric(B[,3]),ylab='Voltage',xlab='datetime',main='',type='l',xaxt='n')
-axis(1,c(bb2,length(bb)+1),c(b1,'Sat'))
+axis(1,c(bb2,length(bb)+1),c('Thu','Fri','Sat'))
 
 plot(as.numeric(B[,2]),ylab=name[2],xlab='datetime',main='',type='l',xaxt='n')
-axis(1,c(bb2,length(bb)+1),c(b1,'Sat'))
+axis(1,c(bb2,length(bb)+1),c('Thu','Fri','Sat'))
 
-dev.copy(png,file='plot4.png')
+dev.copy(png,file='plot4.png',width=480,height=480)
 dev.off()
